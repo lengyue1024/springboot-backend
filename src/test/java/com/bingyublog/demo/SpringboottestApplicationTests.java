@@ -1,7 +1,7 @@
-package com.southwind.springboottest;
+package com.bingyublog.demo;
 
-import com.southwind.springboottest.entity.Book;
-import com.southwind.springboottest.repository.BookRepository;
+import com.bingyublog.demo.entity.Book;
+import com.bingyublog.demo.repository.BookRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,13 +15,13 @@ class SpringboottestApplicationTests {
 
     @Test
     void contextLoads() {
-        PageRequest pageRequest = PageRequest.of(0,6);
+        PageRequest pageRequest = PageRequest.of(0, 6);
         Page<Book> page = repository.findAll(pageRequest);
         int i = 0;
     }
 
     @Test
-    void save(){
+    void save() {
         Book book = new Book();
         book.setName("Spring Boot");
         book.setAuthor("张三");
@@ -30,13 +30,13 @@ class SpringboottestApplicationTests {
     }
 
     @Test
-    void findById(){
+    void findById() {
         Book book = repository.findById(1).get();
         System.out.println(book);
     }
 
     @Test
-    void update(){
+    void update() {
         Book book = new Book();
         book.setId(117);
         book.setName("测试测试");
@@ -45,7 +45,7 @@ class SpringboottestApplicationTests {
     }
 
     @Test
-    void delete(){
+    void delete() {
         repository.deleteById(117);
     }
 }
