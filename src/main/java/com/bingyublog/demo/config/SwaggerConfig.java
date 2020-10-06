@@ -33,8 +33,8 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("CodeCube社区后台管理系统接口文档") //设置文档的标题
-                .description("门户接口文档") // 设置文档的描述
+        return new ApiInfoBuilder().title("测试系统接口文档") //设置文档的标题
+                .description("接口文档") // 设置文档的描述
                 .description("管理中心接口 => Created by 冰羽") // 设置文档的描述
                 /**设置文档的联系方式*/
                 .contact(new Contact("冰羽", "http://www.bingyublog.com", "xzhxpx@qq.com"))
